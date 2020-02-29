@@ -1,0 +1,37 @@
+
+<div class="blog">
+
+    <div class='content' *ngFor="let blog of bloginfo">
+
+
+        <p *ngIf="blog.description">
+            <img src="{{blog.img}}"> <br> {{ blog.name }} {{blog.date}}<br> <b>My Story:</b> {{ blog.description }} <br>
+        </p>
+
+    </div>
+</div>
+
+<!-- <div>
+    <h3>Join our Community</h3><br>
+    <form [formGroup]="newBlogPost" (ngSubmit)="onBlogSubmit()">
+
+        <label>
+      Image Link:
+      <input type="text" formControlName="img" >
+    </label>
+        <br><br>
+        <label>
+      Title/ Date:
+      <input type="text" formControlName="date">
+    </label>
+        <br><br>
+        <label>
+      Your story:
+        <input type="text" formControlName="description">
+      </label>
+        <br><br>
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+
+    </form>
+</div> -->

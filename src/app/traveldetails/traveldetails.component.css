@@ -1,0 +1,18 @@
+.things {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 500px;
+    height: 230px;
+}
+
+h3 {
+    color: black;
+}
+
+a {
+    color: black;
+}

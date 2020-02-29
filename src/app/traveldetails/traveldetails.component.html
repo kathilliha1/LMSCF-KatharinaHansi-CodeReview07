@@ -1,0 +1,16 @@
+<h2 class="text-dark text-center">Available trips</h2>
+<div class='things'>
+    <div *ngFor="let trip of trips; index as tripsId">
+
+        <h3>
+            <a [routerLink]="['/trips', tripsId]">
+           
+     {{ trip.name }}
+   </a>
+        </h3>
+        <p *ngIf="trip.description">
+            <img src="{{trip.img}}"> <br><b>Duration:</b> {{trip.length}}<br> Start Date: {{trip.start}}<br> <b>Description:</b> <br>{{ trip.description }} <br> <b>Cost:</b> <i> {{trip.price | currency }}</i>
+        </p>
+
+    </div>
+</div>

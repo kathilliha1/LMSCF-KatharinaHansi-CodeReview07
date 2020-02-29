@@ -1,0 +1,46 @@
+<h3> Cart
+</h3>
+
+<div class="cart-item" *ngFor="let item of items; index as i">
+    <span>{{ item.name }} </span>
+    <span>{{ item.price | currency }}</span><br>
+    <span> {{item.quantity}}</span>
+    <span> Total {{item.total}}</span>
+    <button class="btn btn-outline-info" (click)="plus(i)">+</button>
+
+    <button class="btn btn-outline-info" (click)="minus(i)">-</button>
+
+    <button class="btn btn-outline-info" (click)="removeItem(i)">X</button>
+
+</div>
+<div class="cart-item mb-5">
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div>
+        <label for="name">
+          Name:
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+        <label for="email">
+          email:
+        </label>
+        <input id="email" type="text" formControlName="email">
+    </div>
+
+    <div>
+      <label for="adress">
+        Adress:
+      </label>
+      <input id="adress" type="text" formControlName="adress">
+  </div>
+
+
+    <button class="btn btn-outline-success mt-2" type="submit">Enjoy</button>
+
+</form>
+<br> <br>
+<button class="btn btn-secondary btn-sm mb-5" routerLink='/traveldetails'>Back to Packages</button>

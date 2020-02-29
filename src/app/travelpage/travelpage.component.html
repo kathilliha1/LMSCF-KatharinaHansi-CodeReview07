@@ -1,0 +1,16 @@
+<h2>Your vaction details!</h2>
+<div id="randomThings">
+
+    <div *ngIf="trip">
+        <h3>{{ trip.name }}</h3>
+        <img src="{{ trip.img }}">
+        <h4>{{ trip.price | currency }}</h4>
+        <p>{{ trip.description }}</p>
+        
+
+        <button class="btn btn-success" (click)="addToCart(trip)" routerLink="/cart">Buy</button>
+        <br> <br>
+    </div>
+
+    <button class='btn btn-lg btn-primary mb-5' routerLink='/traveldetails'>Back to vacations</button>
+</div>
